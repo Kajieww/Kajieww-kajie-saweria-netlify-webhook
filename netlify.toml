@@ -1,0 +1,37 @@
+[build]
+  command = "npm run build"
+  publish = "public"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/trigger"
+  to = "/.netlify/functions/trigger"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/saweria"
+  to = "/.netlify/functions/saweria"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/webhook"
+  to = "/.netlify/functions/saweria"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/webhook/saweria"
+  to = "/.netlify/functions/saweria"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/health"
+  to = "/.netlify/functions/health"
+  status = 200
+  force = true

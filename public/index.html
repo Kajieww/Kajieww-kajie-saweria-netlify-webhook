@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kajie Saweria Control</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <section class="window">
+      <header class="topbar">
+        <div class="dots">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <span class="bar-title">Kajie Saweria Control</span>
+        <span class="badge">Netlify → Roblox</span>
+      </header>
+
+      <div class="content">
+        <div class="hero">
+          <p class="eyebrow">Webhook Bridge</p>
+          <h1>Trigger Saweria ke Roblox</h1>
+          <p class="subtitle">Kirim rupiah, banner, FX, daily board, dan leaderboard ke topic <b>SaweriaDonation</b>.</p>
+        </div>
+
+        <form id="triggerForm" class="form">
+          <label>
+            <span>PIN Admin</span>
+            <input name="pin" type="password" required placeholder="Masukkan ADMIN_PIN" autocomplete="off" />
+          </label>
+
+          <label>
+            <span>Username Roblox / Target</span>
+            <input name="targetName" required placeholder="contoh: SWINGGUNG" autocomplete="off" />
+          </label>
+
+          <label>
+            <span>Nama Donor</span>
+            <input name="donorName" placeholder="contoh: WebDonor" autocomplete="off" />
+          </label>
+
+          <label>
+            <span>Jumlah Rupiah</span>
+            <input id="amountInput" name="amount" required inputmode="numeric" placeholder="contoh: 50000" autocomplete="off" />
+          </label>
+
+          <div class="quick">
+            <button type="button" data-amount="50000">50K • Nuke</button>
+            <button type="button" data-amount="250000">250K • Smite</button>
+            <button type="button" data-amount="500000">500K • Combo</button>
+          </div>
+
+          <label>
+            <span>Pesan</span>
+            <textarea name="message" placeholder="contoh: TEST"></textarea>
+          </label>
+
+          <button class="submit" type="submit">Trigger Saweria</button>
+        </form>
+
+        <section class="status-card">
+          <div class="status-head">
+            <span>Response</span>
+            <button id="healthBtn" type="button">Cek Health</button>
+          </div>
+          <pre id="result">Menunggu trigger...</pre>
+        </section>
+      </div>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

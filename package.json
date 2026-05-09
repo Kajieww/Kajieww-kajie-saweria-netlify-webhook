@@ -1,0 +1,12 @@
+{
+  "name": "kajie-netlify-roblox-webhook-final",
+  "version": "2.0.0",
+  "description": "Netlify Functions webhook bridge to Roblox Open Cloud MessagingService v2 for Saweria/Rupiah trigger.",
+  "private": true,
+  "scripts": {
+    "build": "node -e \"console.log('Static site ready. Netlify Functions will be deployed from netlify/functions.')\""
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
